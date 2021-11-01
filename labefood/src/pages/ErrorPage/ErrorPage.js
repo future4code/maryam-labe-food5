@@ -1,11 +1,10 @@
 import React from 'react';
 
 
-export default function App() {
+export const ErrorPage = () => {
   return (
     <div>
-      <h1>FutureEats</h1>
+      <h1>Erro!</h1>
     </div>
   );
 }
-
