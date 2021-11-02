@@ -2,16 +2,15 @@ import React from 'react';
 import { InitialPageContainer, Logo } from './styled';
 import futureEats from '../../images/futureEats.png'
 import { CircularProgress } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
+
 
 
 
 export const InitialPage = () => {
-  const history = useHistory()
-
+  
 
   setTimeout(function () {
-    window.location.href = '/'
+    window.location.href = '/home'
 
   }, 3000);
 

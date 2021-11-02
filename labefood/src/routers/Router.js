@@ -17,7 +17,7 @@ export const Router = () => {
         <BrowserRouter>
             <Switch>
 
-                <Route exact path='/inicio'>
+                <Route exact path='/'>
                     <InitialPage />
                 </Route>
 
@@ -33,7 +33,7 @@ export const Router = () => {
                     <SignupAddressPage />
                 </Route>
 
-                <Route exact path='/'>
+                <Route exact path='/home'>
                     <HomePage />
                 </Route>
 
