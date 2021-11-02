@@ -18,7 +18,7 @@ export const Router = () => {
             <Switch>
 
                 <Route>
-                    <InitialPage exact path='/inicial'/>
+                    <InitialPage exact path='/inicio'/>
                 </Route>
 
                 <Route>
