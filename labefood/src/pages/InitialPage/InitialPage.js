@@ -1,10 +1,15 @@
 import React from 'react';
-
+import { InitialPageContainer, Logo } from './styled';
+import futureEats from '../../images/futureEats.png'
+import { Button } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { goToLoginPage } from '../../routers/Coordinator';
 
 export const InitialPage = () => {
+  const history = useHistory()
   return (
-    <div>
-      <h1>Página Inicial</h1>
-    </div>
+    <><InitialPageContainer>
+      <Logo src={futureEats} />
+    </InitialPageContainer><Button onClick={()=>goToLoginPage(history)}>Entrar</Button></>
   );
 }

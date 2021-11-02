@@ -17,44 +17,44 @@ export const Router = () => {
         <BrowserRouter>
             <Switch>
 
-                <Route>
-                    <InitialPage exact path='/inicio'/>
+                <Route exact path='/inicio'>
+                    <InitialPage />
                 </Route>
 
-                <Route>
-                    <LoginPage exact path='/login'/>
+                <Route exact path='/login'>
+                    <LoginPage />
                 </Route>
 
-                <Route>
-                    <SignupPage exact path='/cadastro'/>
+                <Route exact path='/cadastro'>
+                    <SignupPage />
                 </Route>
 
-                <Route>
-                    <SignupAddressPage exact path='/cadastro/endereco'/>
+                <Route exact path='/cadastro/endereco'>
+                    <SignupAddressPage />
                 </Route>
 
-                <Route>
-                    <HomePage exact path='/'/>
+                <Route exact path='/'>
+                    <HomePage />
                 </Route>
 
-                <Route>
-                    <SearchPage exact path='/busca'/>
+                <Route exact path='/busca'>
+                    <SearchPage />
                 </Route>
 
-                <Route>
-                    <CartPage exact path='/carrinho'/>
+                <Route exact path='/carrinho'>
+                    <CartPage />
                 </Route>
 
-                <Route>
-                    <RestaurantPage exact path='/feed/restaurante'/>
+                <Route exact path='/feed/restaurante'>
+                    <RestaurantPage />
                 </Route>
 
-                <Route>
-                    <WishPage exact path='/pedido/:id'/>
+                <Route exact path='/pedido/:id'>
+                    <WishPage />
                 </Route>
 
-                <Route>
-                    <ProfilePage exact path='/perfil'/>
+                <Route exact path='/perfil'>
+                    <ProfilePage />
                 </Route>
 
                 <Route>

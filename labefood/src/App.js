@@ -7,8 +7,8 @@ import { Router } from './routers/Router';
 export default function App() {
   return (
     <div>
-      <Typography variant={'h1'}>FutureEats</Typography>
-      <Button>Entrar</Button>
+      {/* <Typography variant={'h1'}>FutureEats</Typography>
+      <Button>Entrar</Button> */}
       <Router/>
     </div>
   );
