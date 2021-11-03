@@ -21,7 +21,11 @@ export function Header(props) {
           >
             <ArrowBackIosIcon onClick={() => history.goBack()}/>
           </IconButton>
-          <TypographyText variant="h6" component="div" sx={{ flexGrow: 1 }} color={'black'}>
+          <TypographyText
+            variant="h6" 
+            component="div" 
+            sx={{ flexGrow: 1 }} 
+            color={'black'}>
             {props.title}
           </TypographyText>
         </Toolbar>
