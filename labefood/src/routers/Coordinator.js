@@ -3,7 +3,7 @@ export const goToLoginPage = (history) => {
 }
 
 export const goToHomePage = (history) => {
-    history.push("/")
+    history.push("/home")
 }
 
 export const goToSignupPage = (history) => {
@@ -11,7 +11,7 @@ export const goToSignupPage = (history) => {
 }
 
 export const goToInitialPage = (history) => {
-    history.push("/inicio")
+    history.push("/")
 }
 
 export const goToProfilePage = (history) => {
