@@ -13,8 +13,8 @@ export function Header(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar color={''} position="static">
+        <Toolbar >
           <IconButton
             color="default"
             sx={{ mr: 2 }}
