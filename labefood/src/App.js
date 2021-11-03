@@ -13,7 +13,12 @@ import Button from '@material-ui/core/Button';
 
 export default function App() {
   return (
+
+    <div>
+
+
     <ThemeProvider theme={theme}>
+
       {/* <Typography variant={'h1'}>FutureEats</Typography>
       <Button>Entrar</Button> */}
       <Router/>
