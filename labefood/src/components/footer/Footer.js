@@ -1,44 +1,52 @@
-import * as React from 'react';
+// import * as React from 'react';
+import React, {useState} from 'react';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import FolderIcon from '@material-ui/icons/Folder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import { goToHomePage, goToLoginPage } from '../../routers/Coordinator';
+import { goToCartPage, goToHomePage, goToProfilePage } from '../../routers/Coordinator';
 import { useHistory } from 'react-router-dom';
+// import useState from 'react'
+
 
 const Footer = () => {
-//   const [value, setValue] = React.useState('recents');
-//   const handleChange = (event, newValue) => {
-//     setValue(newValue);
-//   };
+  const [value, setValue] = useState("recent");
+
+  const handleChange = (event, newValue) => {
+    if (newValue === "home"){
+      goToHomePage(history)
+    }
+    if (newValue === "cart"){
+      goToCartPage(history)
+    }
+    if (newValue === "profile"){
+      goToProfilePage(history)
+    }
+  };
 
 const history = useHistory()
 
   return (
     <BottomNavigation sx={{ width: 500 }} 
-    // value={value} onChange={handleChange}
+    value={value} onChange={handleChange}
     >
       <BottomNavigationAction
-        label="Recents"
-        value="recents"
+        label="Home"
+        value="home"
         icon={<HomeIcon />}
-        // onClick={goToLoginPage(history)}
+        onClick={goToHomePage(history)}
       />
       <BottomNavigationAction
-        label="Favorites"
-        value="favorites"
+        label="Carrinho"
+        value="cart"
         icon={<ShoppingCartOutlinedIcon />}
       />
       <BottomNavigationAction
-        label="Nearby"
-        value="nearby"
+        label="Perfil"
+        value="profile"
         icon={<PersonOutlineOutlinedIcon />}
       />
-      {/* <BottomNavigationAction label="Folder" value="folder" icon={<FolderIcon />} /> */}
     </BottomNavigation>
   );
 }
