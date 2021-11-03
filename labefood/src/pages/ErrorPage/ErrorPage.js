@@ -6,6 +6,7 @@ import { Header } from '../../components/header/Header';
 
 
 export const ErrorPage = () => {
+
   return (
     <div>
       <Header/>
