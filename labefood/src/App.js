@@ -5,11 +5,15 @@ import theme from './constants/theme';
 
 export default function App() {
   return (
-    <div>
+
     <ThemeProvider theme={theme}>
+
+      {/* <Typography variant={'h1'}>FutureEats</Typography>
+      <Button>Entrar</Button> */}
+
       <Router/>
     </ThemeProvider>
-    </div>
+    
   );
 }
 
