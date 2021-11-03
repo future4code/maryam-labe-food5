@@ -1,12 +1,13 @@
 // import * as React from 'react';
 import React, {useState} from 'react';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
+// import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import { goToCartPage, goToHomePage, goToProfilePage } from '../../routers/Coordinator';
 import { useHistory } from 'react-router-dom';
+import { BottomContainer } from './styled';
 // import useState from 'react'
 
 
@@ -28,8 +29,9 @@ const Footer = () => {
 const history = useHistory()
 
   return (
-    <BottomNavigation sx={{ width: 500 }} 
-    value={value} onChange={handleChange}
+    <BottomContainer 
+      value={value} 
+      onChange={handleChange}
     >
       <BottomNavigationAction
         label="Home"
@@ -47,7 +49,7 @@ const history = useHistory()
         value="profile"
         icon={<PersonOutlineOutlinedIcon />}
       />
-    </BottomNavigation>
+    </BottomContainer>
   );
 }
 export default Footer;
