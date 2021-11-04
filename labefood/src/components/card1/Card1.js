@@ -20,27 +20,27 @@ const Item2 = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
     
 }));
-export default function Card1() {
+export default function Card1({name, image, description, price}) {
     return (
         <Card sx={{ flexGrow: 1, maxWidth: 345}}>
             <CardActionArea sx={{maxWidth: 90}}>
                 <CardMedia
                 component="img"
                 height="140"
-                image="https://picsum.photos/400/140"
+                image={image}
                 alt="green iguana"
                 />
             <CardContent>
             <Typography gutterBottom variant="h7" component="div">
-                Chico's bar
+                {name}
             </Typography>
             <Grid container spacing={2} >
                 <Grid item xs={8} >
-                    <Item elevation={0}>50-60min</Item>
+                    <Item elevation={0}>{description}</Item>
                 </Grid>
                 <Grid item xs={4}  >
                     <Typography  gutterBottom variant="h7" component="div">  
-                        <Item2 elevation={0}>Frete R$6,00</Item2>
+                        <Item2 elevation={0}>R${price},00</Item2>
                     </Typography>
                 </Grid>
             </Grid>
