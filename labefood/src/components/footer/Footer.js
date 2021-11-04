@@ -1,6 +1,6 @@
 // import * as React from 'react';
 import React, {useState} from 'react';
-// import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@mui/icons-material/Home';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
@@ -29,7 +29,8 @@ const Footer = () => {
 const history = useHistory()
 
   return (
-    <BottomContainer 
+    <BottomContainer>
+    <BottomNavigation 
       value={value} 
       onChange={handleChange}
     >
@@ -37,7 +38,7 @@ const history = useHistory()
         label="Home"
         value="home"
         icon={<HomeIcon />}
-        onClick={goToHomePage(history)}
+      
       />
       <BottomNavigationAction
         label="Carrinho"
@@ -49,6 +50,7 @@ const history = useHistory()
         value="profile"
         icon={<PersonOutlineOutlinedIcon />}
       />
+      </BottomNavigation>
     </BottomContainer>
   );
 }

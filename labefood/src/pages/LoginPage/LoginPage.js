@@ -6,6 +6,7 @@ import {goToSignupPage} from '../../routers/Coordinator'
 import LoginForm from "./LoginForm";
 import logo from '../../Logo/img/Eats.png'
 
+
 const LoginPage = () => {
      
     const history = useHistory()
@@ -31,3 +32,4 @@ const LoginPage = () => {
 }
 
 export default LoginPage;
+
