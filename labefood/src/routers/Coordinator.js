@@ -1,9 +1,9 @@
 export const goToLoginPage = (history) => {
-    history.push("/home")
+    history.push("/login")
 }
 
 export const goToHomePage = (history) => {
-    history.push("/login")
+    history.push("/home")
 }
 
 export const goToSignupPage = (history) => {
