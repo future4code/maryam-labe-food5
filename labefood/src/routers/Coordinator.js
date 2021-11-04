@@ -1,9 +1,9 @@
 export const goToLoginPage = (history) => {
-    history.push("/home")
+    history.push("/login")
 }
 
 export const goToHomePage = (history) => {
-    history.push("/login")
+    history.push("/home")
 }
 
 export const goToSignupPage = (history) => {
@@ -27,7 +27,7 @@ export const goToCartPage = (history) => {
 }
 
 export const goToRestaurantPage = (history) => {
-    history.push("/feed/restaurante")
+    history.push("/restaurante/:id")
 }
 
 export const goToSearchPage = (history) => {
