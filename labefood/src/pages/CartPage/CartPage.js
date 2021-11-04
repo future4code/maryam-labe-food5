@@ -16,12 +16,14 @@ export const CartPage = () => {
           color={'#bdbdbd'}>
             Endereço de Entrega
         </Typography>
+
         <Typography>
           <strong>
             Rua Alessandra Vieira, 42
           </strong>
         </Typography>
       </ContainerAddress>
+
       <div>
         <Typography
           marginBottom={'7vh'}
@@ -29,12 +31,14 @@ export const CartPage = () => {
           align={'center'}>
             Carrinho vazio
         </Typography>
+
         <Typography
           align={'right'}
           marginRight={'2%'}
           marginBottom={'1vh'}>
             Frete R$0,00
         </Typography>
+
         <DivSpace>
           <Typography>SUBTOTAL</Typography>
           <Typography 
@@ -43,6 +47,7 @@ export const CartPage = () => {
           </Typography>
         </DivSpace>
       </div>
+
       <Typography
         marginTop={'3vh'}
         marginLeft={'2%'}>
@@ -50,10 +55,13 @@ export const CartPage = () => {
           Forma de pagamento
         </strong>
       </Typography>
+
       <hr/>
+
       <MargimSelecao>
         <BotaoSelecao/>
       </MargimSelecao>
+      
       <Footer />
     </div>
   );
