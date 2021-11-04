@@ -24,7 +24,6 @@ const LoginPage = () => {
                     >
                         Não possui conta? Cadastre-se
                     </Button>
-
                 </SignUpButtonContainer>
         </ScreenContainer>
     )
