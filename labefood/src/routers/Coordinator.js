@@ -27,7 +27,7 @@ export const goToCartPage = (history) => {
 }
 
 export const goToRestaurantPage = (history) => {
-    history.push("/feed/restaurante")
+    history.push("/restaurante/:id")
 }
 
 export const goToSearchPage = (history) => {
