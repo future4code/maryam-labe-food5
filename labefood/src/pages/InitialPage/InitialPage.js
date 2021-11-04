@@ -7,17 +7,22 @@ import { CircularProgress } from '@material-ui/core';
 
 
 export const InitialPage = () => {
-  
+
+  const token = localStorage.getItem("token")
 
   setTimeout(function () {
-    window.location.href = '/home'
+    token ?
+      window.location.href = '/home'
+      :
+      window.location.href = '/login'
 
-  }, 3000);
+  }, 2500);
+
 
   return (
     <InitialPageContainer>
       <Logo src={futureEats} />
-      <CircularProgress color={'primary'}/>
+      <CircularProgress color={'primary'} />
     </InitialPageContainer>
   );
 }
