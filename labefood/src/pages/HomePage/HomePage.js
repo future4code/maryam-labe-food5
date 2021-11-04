@@ -7,6 +7,8 @@ import useProtectedPage from '../../hooks/useProtectedPage'
 
 import Card1 from '../../components/card1/Card1';
 import Card3 from '../../components/card3/Card3';
+import { goToRestaurantPage } from '../../routers/Coordinator';
+import { useHistory } from 'react-router-dom';
 
 
 
@@ -16,8 +18,12 @@ import Card3 from '../../components/card3/Card3';
 
 export const HomePage = () => {
   useProtectedPage(); 
+
   const restaurants = useRequestData([], `${BASE_URL}/restaurants`)
   console.log(restaurants)
+
+  const history = useHistory()
+
   return (
     <div>
 
