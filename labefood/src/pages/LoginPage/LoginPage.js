@@ -1,16 +1,35 @@
 import React from "react";
+import { ScreenContainer, LogoImage, SignUpButtonContainer } from "./styled";
+import  Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
+import {goToSignupPage} from '../../routers/Coordinator'
+import LoginForm from "./LoginForm";
+import logo from '../../Logo/img/Eats.png'
 
 
-
-export const LoginPage = () => {
-
-    
+const LoginPage = () => {
+     
+    const history = useHistory()
 
     return (
-        <div>
-            <h1>Login</h1>
-        </div>
+        <ScreenContainer>
+            <LogoImage src={logo} />
+            <LoginForm />
+                <SignUpButtonContainer>
+                    <Button 
+                      onClick={() => goToSignupPage(history)}
+                      type={"submit"}
+                      fullWidth
+                      variant={"text"}
+                      color={"primary"}
+                    >
+                        Não possui conta? Cadastre-se
+                    </Button>
+
+                </SignUpButtonContainer>
+        </ScreenContainer>
     )
 }
 
-// export default LoginPage;
+export default LoginPage;
+

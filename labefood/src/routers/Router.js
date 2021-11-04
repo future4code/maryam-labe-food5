@@ -4,7 +4,8 @@ import { CartPage } from "../pages/CartPage/CartPage";
 import { ErrorPage } from "../pages/ErrorPage/ErrorPage";
 import { HomePage } from "../pages/HomePage/HomePage";
 import { InitialPage } from "../pages/InitialPage/InitialPage";
-import { LoginPage } from "../pages/LoginPage/LoginPage";
+
+import LoginPage from "../pages/LoginPage/LoginPage";
 import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 import { RestaurantPage } from "../pages/RestaurantPage/RestaurantPage";
 import { SearchPage } from "../pages/SearchPage/SearchPage";
@@ -22,7 +23,7 @@ export const Router = () => {
                 </Route>
 
                 <Route exact path='/login'>
-                    <LoginPage />
+                    <LoginPage/>
                 </Route>
 
                 <Route exact path='/cadastro'>
@@ -34,7 +35,7 @@ export const Router = () => {
                 </Route>
 
                 <Route exact path='/home'>
-                    <HomePage />
+                    <HomePage   />
                 </Route>
 
                 <Route exact path='/busca'>
