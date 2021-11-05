@@ -12,10 +12,12 @@ import Loading from '../../components/loading/Loading';
 import Card4 from '../../components/card4/Card4';
 
 
+
 export const RestaurantPage = () => {
   useProtectedPage()
 
   const params = useParams()
+
 
   const rest = useRequestData({}, `${BASE_URL}/restaurants/${params.id}`)
 
@@ -122,5 +124,6 @@ export const RestaurantPage = () => {
         <Loading />
       }
     </ScreenContainer>
+
   );
 }

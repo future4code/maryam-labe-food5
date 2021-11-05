@@ -7,7 +7,6 @@ import { CardActionArea } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { styled } from '@material-ui/core/styles';
-
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body3,
     // padding: theme.spacing(1),
@@ -18,7 +17,6 @@ const Item2 = styled(Paper)(({ theme }) => ({
     ...theme.typography.body3,
     textAlign: 'right',
     color: theme.palette.text.secondary,
-    
 }));
 export default function Card1() {
     return (
