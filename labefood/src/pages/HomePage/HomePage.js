@@ -11,7 +11,9 @@ import { SearchPage } from '../SearchPage/SearchPage';
 import { goToSearchPage } from '../../routers/Coordinator';
 import { goToRestaurantPage } from '../../routers/Coordinator';
 import { useHistory } from 'react-router-dom';
-
+import containerButtons from "./styled" 
+import {Buttons} from "./styled" 
+import {cardContained} from "./styled" 
 
 
 
@@ -31,21 +33,19 @@ export const HomePage = () => {
     <div>
 
       <Header title={'FutureEats'}/>
-      
-
-
-
-      {/* <h1>Home</h1>
+      {/* <containerButtons> */}
+        <Buttons><h3>Massas</h3></Buttons>
+        {/* <Buttons><h3>Burger</h3></Buttons> */}
+        <Buttons><h3>Saudaveis</h3></Buttons>
+        <Buttons><h3>Asiatica</h3></Buttons>
+        <Buttons><h3>Mexicana</h3></Buttons>
+      {/* </containerButtons> */}
       <Card1/>
       <br/>
       <Card1/>
       <br/>
       <Card1/>
       <br/>
-      <Card3/> */}
-
-
-      <h1>Home</h1>
 
       <button onClick={() => goToSearchPage(history)}>Busca</button>
 
