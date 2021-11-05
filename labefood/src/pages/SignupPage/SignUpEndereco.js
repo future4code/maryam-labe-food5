@@ -2,21 +2,17 @@ import React from "react";
 import { InputsContainer, SignUpFormContainer } from "./styled";
 import TextField from "@material-ui/core/TextField";
 import Button  from "@material-ui/core/Button";
-import {useForm} from "../../hooks/useForm";
-import {useHistory} from "react-router-dom";
-import signUp from "../../services/user"
+import {useForm} from "../../hooks/useForm"
+import axios from "axios";
 
-const SignUpForm = () => {
 
-    const [form , onChange, clear] = useForm({name: "", email: "",cpf: "", password: ""})
+const SignUpEndereco= () => {
+
+    const [form , onChange, clear] = useForm({street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""})
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        signUp(form, clear, history)
-        
     }
-
-    const history = useHistory()
 
     
     return (
@@ -24,11 +20,11 @@ const SignUpForm = () => {
            <SignUpFormContainer>
              <InputsContainer>
                        <TextField
-                        name={"name"}
-                        value={form.nome}
+                        name={"rua"}
+                        value={form.street}
                         onChange={onChange}
                         variant={"outlined"}
-                        label={"Nome"}
+                        label={"Rua"}
                         margin={"normal"}
                         fullWidth
                         required
@@ -81,4 +77,4 @@ const SignUpForm = () => {
     </form>
     )
 }
-export default SignUpForm;
+export default SignUpEndereco;

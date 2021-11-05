@@ -37,3 +37,7 @@ export const goToSearchPage = (history) => {
 export const goBack = (history) => {
     history.goBack()
 }
+
+export const goToUpEndereco = (history) => {
+    history.push("/endereco")
+}

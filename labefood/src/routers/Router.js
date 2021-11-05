@@ -12,12 +12,12 @@ import { SearchPage } from "../pages/SearchPage/SearchPage";
 import { SignupAddressPage } from "../pages/SignupPage/SignupAddressPage";
 import { SignupPage } from "../pages/SignupPage/SignupPage";
 import { WishPage } from "../pages/WishPage/WishPage";
+import SignUpEndereco from "../pages/SignupPage/SignUpEndereco";
 
 export const Router = () => {
     return(
         <BrowserRouter>
             <Switch>
-
                 <Route exact path='/'>
                     <InitialPage />
                 </Route>
@@ -52,6 +52,10 @@ export const Router = () => {
 
                 <Route exact path='/pedido/:id'>
                     <WishPage />
+                </Route>
+
+                <Route exact path='/endereco'>
+                    <SignUpEndereco />
                 </Route>
 
                 <Route exact path='/perfil'>
