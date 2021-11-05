@@ -20,7 +20,7 @@ export const HomePage = () => {
   useProtectedPage(); 
 
   const restaurants = useRequestData([], `${BASE_URL}/restaurants`)
-  console.log(restaurants)
+  // console.log(restaurants)
 
   const history = useHistory()
 
@@ -41,6 +41,7 @@ export const HomePage = () => {
 
 
       <h1>Home</h1>
+      <button onClick={()=>goToRestaurantPage(history, 8)}>ver restaurante</button>
       <Footer />
 
     </div>

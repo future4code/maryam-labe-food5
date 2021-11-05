@@ -8,6 +8,7 @@ import Card2 from '../../components/card2/Card2'
 import { Image } from './styled';
 import { Typography } from '@mui/material';
 import { ScreenContainer } from './styled';
+import Loading from '../../components/loading/Loading';
 
 
 export const RestaurantPage = () => {
@@ -29,24 +30,27 @@ export const RestaurantPage = () => {
   return (
     <ScreenContainer>
       <Header title={'Restaurante'} />
-      <Image src={restaurant && restaurant.logoUrl} />
-      <Typography>
-        {restaurant && restaurant.name}
-      </Typography>
+      {restaurant ? <>
+        <Image src={restaurant.logoUrl} />
+        <Typography>
+          {restaurant && restaurant.name}
+        </Typography>
 
-      {restaurant && restaurant.products.map((prod) => {
-        console.log("prod", prod)
-        return (
-          <Card2
-            name={prod.name}
-            image={prod.photoUrl}
-            description={prod.description}
-            price={prod.price}
-          />
-        )
-      })}
-
-
+        {restaurant && restaurant.products.map((prod) => {
+          console.log("prod", prod)
+          return (
+            <Card2
+              name={prod.name}
+              image={prod.photoUrl}
+              description={prod.description}
+              price={prod.price}
+            />
+          )
+        })}
+      </>
+        :
+        <Loading />
+      }
     </ScreenContainer>
   );
 }
