@@ -4,11 +4,12 @@ import { goToUpEndereco } from "../routers/Coordinator";
 
 const useUnprotectedPage = () => {
     const history = useHistory()
+    
     useLayoutEffect(() => {
         const token = localStorage.getItem("token")
         if (token) {
+
             goToUpEndereco(history)
-        }
     }, [history])
 }
 

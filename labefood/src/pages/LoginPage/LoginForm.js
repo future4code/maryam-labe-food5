@@ -5,6 +5,7 @@ import  Button  from "@material-ui/core/Button";
 import {useHistory} from "react-router-dom";
 import {goToHomePage} from '../../routers/Coordinator'
 import { useForm } from "../../hooks/useForm";
+import { login } from "../../services/user";
 
 
 
@@ -16,6 +17,7 @@ const LoginForm = () => {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
+        login(form, clear, history)
     }
 
     const history = useHistory();
@@ -48,7 +50,7 @@ const LoginForm = () => {
                   />
               </ InputsContainer>
                   <Button
-                      onClick={() => goToHomePage(history)}
+                    //   onClick={() => goToHomePage(history)}
                       type={"submit"}
                       fullWidth
                       variant="contained"

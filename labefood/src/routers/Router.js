@@ -46,7 +46,7 @@ export const Router = () => {
                     <CartPage />
                 </Route>
 
-                <Route exact path='/feed/restaurante'>
+                <Route exact path='/restaurante/:id'>
                     <RestaurantPage />
                 </Route>
 

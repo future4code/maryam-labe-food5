@@ -5,7 +5,9 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import {AccessTimeIcon} from '@material-ui/icons/AccessTime';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+
 
 export default function Card3() {
   return (
@@ -15,7 +17,7 @@ export default function Card3() {
           Pedido em andamento 
         </Typography>
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          Chico's bar
+          <AccessTimeIcon/>Chico's bar
         </Typography>
         <Typography gutterBottom variant="h1" component="div" variant="body2">
           SUBTOTAL R$63,00
@@ -24,3 +26,4 @@ export default function Card3() {
     </Card>
   );
 }
+

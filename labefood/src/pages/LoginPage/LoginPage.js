@@ -4,10 +4,12 @@ import  Button from "@material-ui/core/Button";
 import { useHistory } from "react-router-dom";
 import {goToSignupPage} from '../../routers/Coordinator'
 import LoginForm from "./LoginForm";
+import useUnprotectedPage from '../../hooks/useUnprotectedPage'
 import logo from '../../Logo/img/Eats.png'
 
+
 const LoginPage = () => {
-     
+     useUnprotectedPage()
     const history = useHistory()
 
     return (
@@ -24,10 +26,10 @@ const LoginPage = () => {
                     >
                         Não possui conta? Cadastre-se
                     </Button>
-
                 </SignUpButtonContainer>
         </ScreenContainer>
     )
 }
 
 export default LoginPage;
+
