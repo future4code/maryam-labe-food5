@@ -20,7 +20,7 @@ export const HomePage = () => {
   useProtectedPage(); 
 
   const restaurants = useRequestData([], `${BASE_URL}/restaurants`)
-  // console.log(restaurants)
+  console.log(restaurants)
 
   const history = useHistory()
 
