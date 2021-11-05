@@ -1,10 +1,12 @@
 import styled from 'styled-components'
-import { Typography } from '@mui/material'
 
-export const TypographyText = styled(Typography)`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
+import Toolbar from '@material-ui/core/Toolbar';
+
+
+export const StyledToolbar = styled(Toolbar)`
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 5px;
+
 `
