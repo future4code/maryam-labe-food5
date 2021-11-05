@@ -10,10 +10,12 @@ import { Typography } from '@mui/material';
 import { ScreenContainer } from './styled';
 
 
+
 export const RestaurantPage = () => {
   useProtectedPage()
 
   const params = useParams()
+
 
   const rest = useRequestData({}, `${BASE_URL}/restaurants/${params.id}`)
 
@@ -48,5 +50,6 @@ export const RestaurantPage = () => {
 
 
     </ScreenContainer>
+
   );
 }

@@ -7,8 +7,11 @@ import useProtectedPage from '../../hooks/useProtectedPage'
 
 import Card1 from '../../components/card1/Card1';
 import Card3 from '../../components/card3/Card3';
+import { SearchPage } from '../SearchPage/SearchPage';
+import { goToSearchPage } from '../../routers/Coordinator';
 import { goToRestaurantPage } from '../../routers/Coordinator';
 import { useHistory } from 'react-router-dom';
+
 
 
 
@@ -28,6 +31,8 @@ export const HomePage = () => {
     <div>
 
       <Header title={'FutureEats'}/>
+      
+
 
 
       {/* <h1>Home</h1>
@@ -41,6 +46,9 @@ export const HomePage = () => {
 
 
       <h1>Home</h1>
+
+      <button onClick={() => goToSearchPage(history)}>Busca</button>
+
       <Footer />
 
     </div>
