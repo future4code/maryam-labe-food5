@@ -22,14 +22,15 @@ const Item2 = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
     
 }));
-export default function Card2({name, image, description, price}) {
+export default function Card4({name, image, category, address, deliveryTime, shipping}) {
     return (
         <Card sx={{ flexGrow: 2, maxWidth: 345}}>
             <CardActionArea sx={{maxWidth: 90}}>
                 <CardMedia
                 component="img"
-                height="140"
-                width="140"
+                height="120"
+                width="328"
+                radius="8"
                 image={image}
                 alt="green iguana"
                 />
@@ -39,15 +40,17 @@ export default function Card2({name, image, description, price}) {
             </Typography>
             <Grid container spacing={2} >
                 <Grid item xs={8} >
-                    <Item elevation={0}>{description}</Item>
+                    <Item elevation={0}>{category}</Item>
+                </Grid>
+                <Grid item xs={8} >
+                    <Item elevation={0}>{deliveryTime} min</Item>
                 </Grid>
                 <Grid item xs={4}  >
-                  <Typography gutterBottom variant="h7" component="div">
-                    R${price},00
-                  </Typography>
-                  <Stack spacing={2} direction="row" component="div">
-                    <Button variant="outlined">Adicionar</Button>
-                  </Stack>
+                  
+                    <Item elevation={0}>Frete R${shipping},00</Item>
+                </Grid>
+                <Grid item xs={8} >
+                    <Item elevation={0}>{address}</Item>
                 </Grid>
             </Grid>
             </CardContent>

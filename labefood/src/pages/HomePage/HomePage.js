@@ -50,6 +50,11 @@ export const HomePage = () => {
 
       <button onClick={() => goToSearchPage(history)}>Busca</button>
 
+
+//       <h1>Home</h1>
+//       <button onClick={()=>goToRestaurantPage(history, 8)}>ver restaurante</button>
+
+
       <Footer />
 
     </div>
