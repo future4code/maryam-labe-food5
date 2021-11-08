@@ -43,4 +43,7 @@ Criamos um layout entre cliente e prestador de serviços que tenha fácil acesso
 ## Link do surge
 
 - parallel-force.surge.sh
+- acesso
+   email: astrodev@future4.com
+   password: 123456
 
