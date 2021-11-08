@@ -15,7 +15,7 @@ NodeJS guia de instalação -> https://nodejs.org/en/download/package-manager/
 ```
 Configure o ambiente e baixe o projeto:
 ```
-- $ git clone 
+- $ git clone https://github.com/future4code/maryam-labe-food5.git
 - $ cd maryam-labe-food5
 
 ### Terceira etapa 
